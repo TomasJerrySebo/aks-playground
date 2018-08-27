@@ -232,9 +232,9 @@ http://[APP DNS NAME]/perf
 ### #7 Let's scale - horizontal autoscaler
 We can use horizontal auto-scale engine to dynamically scale PODs based on CPU or memory metrics.
 
-#### Prepare autoscale metrics - valid only for AKS version <= 1.10.*
+#### Prepare autoscale metrics - valid only for AKS version <= 1.10.x
 Run these command to install "metrics-server" to your cluster.
-*For cluster version 1.11.* the Metrics Server is already installed and is working*
+*For cluster version 1.11.x the Metrics Server is already installed and is working*
 
 ```bash
 helm install stable/metrics-server --name metrics --set-string rbac.create=false
