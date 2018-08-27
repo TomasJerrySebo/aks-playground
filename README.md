@@ -260,6 +260,16 @@ Now we can generate load to our end point, let's use `ab` command line tool (you
 ab -k -c 8 -n 200000 http://[APP DNS NAME]/perf
 ```
 
+Or you can run few times curl command and after test you can kill all running background curl commands by 'pkill'
+
+```bash
+# you can run fet times this background task ...
+curl "[APP DNS NAME]/perf?x=[0-10000]" 2> /dev/null > /dev/null &
+
+# after test you can kill all curl processes
+pkill curl
+```
+
 ### #8 Clean-up deployment after tests..
 
 `helm del --purge myrelease` 
