@@ -198,7 +198,7 @@ In this steps we will deploy our custom application, for container image storage
 #### Publish docker image to Azure Container Registry
 
 ##### Process from command line
-* Download docker image to your machine 'docker pull valda/webstress'
+* Download docker image to your machine `docker pull valda/webstress`
 * Create tag on your docker image, first of all list images by `docker images` and than `docker tag valda/webstress [YOUR REGISTRY NAME].azurecr.io/[YOUR APP IMAGE]`
 * login to container registry `docker login [YOUR REGISTRY NAME].azurecr.io -u xxxxxxxx -p myPassword` - credentials for registry are visible in Azure Portal.
 * push image to registry `docker push [YOUR REGISTRY NAME].azurecr.io/[YOUR APP IMAGE]`
